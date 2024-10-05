@@ -7,7 +7,12 @@ const taskSchema = new mongoose.Schema({
     deadline: { type: Date },
     status: { type: String, enum: ['incomplete', 'complete'], default: 'incomplete' },
     category: { type: String, default: 'general' },
+    assignees: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }],
 }, { timestamps: true });
 
-module.exports = mongoose.model('Task', taskSchema);
+TaskSchema.index({ title: 'text', description: 'text', tags: 'text' });
 
+module.exports = mongoose.model('Task', taskSchema);
