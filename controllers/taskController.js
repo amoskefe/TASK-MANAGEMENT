@@ -1,4 +1,4 @@
-const Task = require('../models/Task');
+const Task = require('../Models/Task');
 const User = require('../models/User');
 const Activity = require('../Models/Activity');
 const Notification = require('../Models/Notification'); // Corrected casing

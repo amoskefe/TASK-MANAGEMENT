@@ -2,8 +2,8 @@ const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
 const swaggerOptions = {
+  openapi: '3.0.0', // Move 'openapi' outside of 'swaggerDefinition'
   swaggerDefinition: {
-    openapi: '3.0.0',
     info: {
       title: 'Task Management API',
       version: '1.0.0',

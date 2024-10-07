@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const User = require('../models/users/User');
+const User = require('../models/User'); 
 const { register, login } = require('../controllers/authController');
 const { createAccountLimiter, loginLimiter } = require('../middleware/rateLimiter');
 const router = express.Router();
