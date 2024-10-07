@@ -1,7 +1,7 @@
-const Task = require('../models/Task');
+const Task = require('../models/task'); 
 const User = require('../models/User');
-const Activity = require('../Models/Activity');
-const Notification = require('../Models/Notification'); // Corrected casing
+const Activity = require('../models/Activity');
+const Notification = require('../Models/Notification');
 
 // Create a Task
 exports.createTask = async (req, res) => {
